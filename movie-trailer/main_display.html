@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Annie's Favorite Films!</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" charset="utf-8">
+// Pause the video when the modal is closed
+$(document).on('click', '.hanging-close, .modal-backdrop, .modal', function(event)
+{
+  // Remove the src so the player itself gets removed, as this is the only
+  // reliable way to ensure the video stops playing in IE
+  $("#trailer-video-container").empty();
+});
+// Start playing the video whenever the trailer modal is opened
+$(document).on('click', '.movie-tile', function(event)
+{
+  var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+  var sourceUrl = 'https://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+  $("#trailer-video-container").empty().append($("<iframe></iframe>",
+  {
+    'id': 'trailer-video',
+    'type': 'text-html',
+    'src': sourceUrl,
+    'frameborder': 0
+  }));
+});
+// Animate in the movies when the page loads
+$(document).ready(function()
+{
+  $('.movie-tile').hide().first().show("fast", function showNext()
+  {
+    $(this).next("div").show("fast", showNext);
+  });
+});
+// Animate in the tv shows when the page loads
+$(document).ready(function()
+{
+  $('.show-tile').hide().first().show("fast", function showNext()
+  {
+    $(this).next("div").show("fast", showNext);
+  });
+});
+
+    </script>
+  </head>
+
+  <body>
+    <!-- Trailer Video Modal -->
+    <div class="modal" id="trailer">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+            <img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+          </a>
+          <div class="scale-media" id="trailer-video-container">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Page Content -->
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Movie and TV Show Trailers</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h1 class="title text-center">Movie list</h1>
+
+      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5PSNL1qE6VY" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b0/Avatar-Teaser-Poster.jpg" width="220" height="342">
+        <h2>Avatar</h2>
+        <h5>(2009)</h5>
+        <p>A paraplegic marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="44LdLqgOpjo" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/34/Kong_Skull_Island_poster.jpg" width="220" height="342">
+        <h2>Kong: Skull Island</h2>
+        <h5>(2017)</h5>
+        <p>A team of scientists explore an uncharted island in the Pacific, venturing into the domain of the mighty Kong, and must fight to escape a primal Eden.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="32WeiH4TrIY" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Parenttrapposter.jpg" width="220" height="342">
+        <h2>Parent Trap</h2>
+        <h5>(1998)</h5>
+        <p>Identical twins Annie and Hallie, discover each other for the first time at summer camp and make a plan to bring their wayward parents back together.</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="5kIe6UZHSXw" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/78/Power_Rangers_%282017_Official_Theatrical_Poster%29.png" width="220" height="342">
+        <h2>Power Rangers</h2>
+        <h5>(2017)</h5>
+        <p>A group of high-school students, who are infused with unique superpowers, harness their abilities in order to save the world before it is controlled by the enemy.</p>
+      </div>
+
+    </div>
+    <div class="container">
+      <h1 class="title text-center">TV Shows list</h1>
+
+      <div class="col-md-6 col-lg-4 movie-tile show-tile text-center" data-trailer-youtube-id="luL1BaK87mA" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Bones_title_card.png" width="220" height="342">
+        <h2>Bones</h2>
+        <h5>(Fox)</h5>
+        <p>12 seasons - 246 episodes</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 movie-tile show-tile text-center" data-trailer-youtube-id="lJ_DpIWpH6M" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Top_Chef_Just_Desserts_logo.png" width="220" height="342">
+        <h2>Top Chef: Just Desserts</h2>
+        <h5>(Bravo)</h5>
+        <p>2 seasons - 20 episodes</p>
+      </div>
+
+      <div class="col-md-6 col-lg-4 movie-tile show-tile text-center" data-trailer-youtube-id="1KhRKkLS_4I" data-toggle="modal" data-target="#trailer">
+        <img src="https://upload.wikimedia.org/wikipedia/en/1/11/Fresh_Off_the_Boat_intertitle.png" width="220" height="342">
+        <h2>Fresh Off The Boat</h2>
+        <h5>(ABC)</h5>
+        <p>3 seasons - 60 episodes</p>
+      </div>
+
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,91 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #23272B;
+  /*background      : linear-gradient(to bottom, rgb(248,248,255), rgb(0,0,0));*/
+  color: black;
+}
+
+#about {
+  color: #f8f8ff;
+}
+
+#name {
+  font-family: 'Black Ops One', cursive;
+  color: white;
+  text-shadow: 3px 3px 1px black;
+}
+
+.card, .modal-header {
+  background-color: black;
+  color: #ffefd5;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(38, 12, 12)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.jumbotron {
+  background-image: url("http://www.ridgedesign.ie/wp-content/uploads/2011/02/Ridge-Design-Website-Design-Background.jpg");
+  background-size: cover;
+  min-height: 300px;
+}
+
+.jumbotron p {
+  color: #ffefd5;
+  text-shadow: 2px 2px 0 black;
+}
+
+.modal-content {
+  background-color: #D8D2CD;
+}
+
+.modal-content * {
+  border-color: black;
+}
+
+.mouse {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: rgba(248, 248, 255, 0.5);
+}
+
+.navbar-brand {
+  font-family: 'Bungee Shade', cursive;
+  background-color: #23272B;
+  font-size: 35px;
+}
+
+.nav-pills>li>a.active {
+  background-color: white !important;
+  text-transform: uppercase !important;
+}
+
+.title {
+  border-bottom: dotted;
+  font-family: 'Bungee', cursive;
+  text-shadow: 2px 2px 0 black;
+  color: #f8f8ff;
+}
+
+/*fix a gap when mousing over the icon with a box shadow*/
+
+.zocial, a.zocial {
+  display: block;
+}
+
+/***** Media queries *****/
+
+@media screen and (max-width: 576px) {
+  .navbar {
+    background-color: rgba(216, 215, 213, 0.8);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .jumbotron .container {
+    background-color: rgba(216, 215, 213, 0.5);
+    border-radius: 5px;
+  }
+}

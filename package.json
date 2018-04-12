@@ -1,0 +1,23 @@
+{
+  "name": "portfolio_webpage",
+  "version": "0.0.1",
+  "description": "grunt file for portfolio webpage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-mkdir": "^1.0.0",
+    "grunt-responsive-images": "^1.10.1"
+  },
+  "dependencies": {
+    "grunt-cli": "^1.2.0",
+    "npm": "^5.8.0"
+  }
+}
