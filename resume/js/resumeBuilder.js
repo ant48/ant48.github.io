@@ -6,13 +6,13 @@ var bio = {
   name: "Nhu Tran (Annie)",
   role: "Front-end Developer",
   contacts: {
-    mobile: "934-7770",
+    mobile: "571-0990",
     email: "annientran48@gmail.com",
     github: "ant48",
-    location: "Greenbrier"
+    location: "Nashville"
   },
   welcomeMessage: "To work with an organization where my skills and educational are being utilized as well as enhanced.",
-  skills: ["HTML", "CSS", "JavaScript", "Bootstrap", "Python", "SQL"],
+  skills: ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Python", "AJAX"],
   biopic: "../images/LinkedIn_picture-small.jpg"
 };
 
